@@ -152,7 +152,7 @@ class TwoFactorAuth
     public function getQRText(string $label, #[SensitiveParameter] string $secret, string $user): string
     {
         return 'otpauth://totp/' . rawurlencode($label)
-			. ( !$user ? '' : ':' . rawurlencode($user) )
+            . ( !$user ? '' : ':' . rawurlencode($user) )
             . '?secret=' . rawurlencode($secret)
             . '&issuer=' . rawurlencode((string)$this->issuer)
             . '&period=' . $this->period
