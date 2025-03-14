@@ -104,7 +104,7 @@ class TwoFactorAuth
     /**
      * Get data-uri of QRCode
      */
-    public function getQRCodeImageAsDataUri(string $label, #[SensitiveParameter] string $secret, int $size = 200): string
+    public function getQRCodeImageAsDataUri(string $label, #[SensitiveParameter] string $secret, string $user = '', int $size = 200): string
     {
         if ($size <= 0) {
             throw new TwoFactorAuthException('Size must be > 0');
@@ -113,7 +113,7 @@ class TwoFactorAuth
         return 'data:'
             . $this->qrcodeprovider->getMimeType()
             . ';base64,'
-            . base64_encode($this->qrcodeprovider->getQRCodeImage($this->getQRText($label, $secret), $size));
+            . base64_encode($this->qrcodeprovider->getQRCodeImage($this->getQRText($label, $secret, $user), $size));
     }
 
     /**
@@ -149,9 +149,10 @@ class TwoFactorAuth
     /**
      * Builds a string to be encoded in a QR code
      */
-    public function getQRText(string $label, #[SensitiveParameter] string $secret): string
+    public function getQRText(string $label, #[SensitiveParameter] string $secret, string $user): string
     {
         return 'otpauth://totp/' . rawurlencode($label)
+			. ( !$user ? '' : ':' . rawurlencode($user) )
             . '?secret=' . rawurlencode($secret)
             . '&issuer=' . rawurlencode((string)$this->issuer)
             . '&period=' . $this->period
