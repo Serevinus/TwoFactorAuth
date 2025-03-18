@@ -1,4 +1,6 @@
-# RobThree\TwoFactorAuth changelog
+# Serevinus\TwoFactorAuth changelog
+
+Forked from RobThree\TwoFactorAuth 3.0.2
 
 # Version 3.x
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth;
+namespace Serevinus\Auth;
 
 /**
  * List of supported cryptographic algorithms

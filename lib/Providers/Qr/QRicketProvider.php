@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Qr;
+namespace Serevinus\Auth\Providers\Qr;
 
 /**
  * Use http://qrickit.com/qrickit_apps/qrickit_api.php to provide a QR code

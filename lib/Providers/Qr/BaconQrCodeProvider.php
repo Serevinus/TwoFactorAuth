@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Qr;
+namespace Serevinus\Auth\Providers\Qr;
 
 use BaconQrCode\Renderer\Color\Rgb;
 use BaconQrCode\Renderer\Image\EpsImageBackEnd;

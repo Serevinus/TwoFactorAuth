@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Rng;
+namespace Serevinus\Auth\Providers\Rng;
 
 interface IRNGProvider
 {

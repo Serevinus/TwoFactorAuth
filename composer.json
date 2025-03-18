@@ -1,9 +1,9 @@
 {
-    "name": "robthree/twofactorauth",
+    "name": "serevinus/twofactorauth",
     "description": "Two Factor Authentication",
     "type": "library",
     "keywords": [ "Authentication", "Two Factor Authentication", "Multi Factor Authentication", "TFA", "MFA", "PHP", "Authenticator", "Authy" ],
-    "homepage": "https://github.com/RobThree/TwoFactorAuth",
+    "homepage": "https://github.com/Serevinus/TwoFactorAuth",
     "license": "MIT",
     "authors": [
         {
@@ -20,11 +20,16 @@
             "name": "Will Power",
             "homepage": "https://github.com/willpower232",
             "role": "Developer"
+        },
+        {
+            "name": "Jim Mead",
+            "homepage": "https://github.com/Serevinus",
+            "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/RobThree/TwoFactorAuth/issues",
-        "source": "https://github.com/RobThree/TwoFactorAuth"
+        "issues": "https://github.com/Serevinus/TwoFactorAuth/issues",
+        "source": "https://github.com/Serevinus/TwoFactorAuth"
     },
     "require": {
         "php": ">=8.2.0"
@@ -40,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RobThree\\Auth\\": "lib"
+            "Serevinus\\Auth\\": "lib"
         }
     },
     "autoload-dev": {

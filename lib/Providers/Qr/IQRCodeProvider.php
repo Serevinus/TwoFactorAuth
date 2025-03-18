@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Qr;
+namespace Serevinus\Auth\Providers\Qr;
 
 interface IQRCodeProvider
 {

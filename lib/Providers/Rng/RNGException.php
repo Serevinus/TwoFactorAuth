@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Rng;
+namespace Serevinus\Auth\Providers\Rng;
 
-use RobThree\Auth\TwoFactorAuthException;
+use Serevinus\Auth\TwoFactorAuthException;
 
 class RNGException extends TwoFactorAuthException
 {

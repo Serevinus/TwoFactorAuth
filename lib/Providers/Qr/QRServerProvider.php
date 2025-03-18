@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Qr;
+namespace Serevinus\Auth\Providers\Qr;
 
 /**
  * Use https://goqr.me/api/doc/create-qr-code/ to get QR code

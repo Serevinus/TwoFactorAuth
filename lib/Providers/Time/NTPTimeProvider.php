@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Time;
+namespace Serevinus\Auth\Providers\Time;
 
 use Exception;
 

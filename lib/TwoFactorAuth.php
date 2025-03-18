@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth;
+namespace Serevinus\Auth;
 
 use function hash_equals;
 
-use RobThree\Auth\Providers\Qr\IQRCodeProvider;
-use RobThree\Auth\Providers\Rng\CSRNGProvider;
-use RobThree\Auth\Providers\Rng\IRNGProvider;
-use RobThree\Auth\Providers\Time\HttpTimeProvider;
-use RobThree\Auth\Providers\Time\ITimeProvider;
-use RobThree\Auth\Providers\Time\LocalMachineTimeProvider;
-use RobThree\Auth\Providers\Time\NTPTimeProvider;
+use Serevinus\Auth\Providers\Qr\IQRCodeProvider;
+use Serevinus\Auth\Providers\Rng\CSRNGProvider;
+use Serevinus\Auth\Providers\Rng\IRNGProvider;
+use Serevinus\Auth\Providers\Time\HttpTimeProvider;
+use Serevinus\Auth\Providers\Time\ITimeProvider;
+use Serevinus\Auth\Providers\Time\LocalMachineTimeProvider;
+use Serevinus\Auth\Providers\Time\NTPTimeProvider;
 use SensitiveParameter;
 
 // Based on / inspired by: https://github.com/PHPGangsta/GoogleAuthenticator
@@ -104,7 +104,7 @@ class TwoFactorAuth
     /**
      * Get data-uri of QRCode
      */
-    public function getQRCodeImageAsDataUri(string $label, #[SensitiveParameter] string $secret, string $user = '', int $size = 200): string
+    public function getQRCodeImageAsDataUri(string $label, #[SensitiveParameter] string $secret, int $size = 200): string
     {
         if ($size <= 0) {
             throw new TwoFactorAuthException('Size must be > 0');
@@ -113,7 +113,7 @@ class TwoFactorAuth
         return 'data:'
             . $this->qrcodeprovider->getMimeType()
             . ';base64,'
-            . base64_encode($this->qrcodeprovider->getQRCodeImage($this->getQRText($label, $secret, $user), $size));
+            . base64_encode($this->qrcodeprovider->getQRCodeImage($this->getQRText($label, $secret), $size));
     }
 
     /**
@@ -149,7 +149,7 @@ class TwoFactorAuth
     /**
      * Builds a string to be encoded in a QR code
      */
-    public function getQRText(string $label, #[SensitiveParameter] string $secret, string $user): string
+    public function getQRText(string $label, #[SensitiveParameter] string $secret): string
     {
         return 'otpauth://totp/' . rawurlencode($label)
             . ( !$user ? '' : ':' . rawurlencode($user) )

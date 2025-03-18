@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Qr;
+namespace Serevinus\Auth\Providers\Qr;
 
 use function base64_decode;
 use function preg_match;

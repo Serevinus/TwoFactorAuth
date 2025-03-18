@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RobThree\Auth\Providers\Time;
+namespace Serevinus\Auth\Providers\Time;
 
 use DateTime;
 use Exception;
@@ -30,7 +30,7 @@ class HttpTimeProvider implements ITimeProvider
                     'request_fulluri' => true,
                     'header' => array(
                         'Connection: close',
-                        'User-agent: TwoFactorAuth HttpTimeProvider (https://github.com/RobThree/TwoFactorAuth)',
+                        'User-agent: TwoFactorAuth HttpTimeProvider (https://github.com/Serevinus/TwoFactorAuth)',
                         'Cache-Control: no-cache',
                     ),
                 ),
