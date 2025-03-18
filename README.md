@@ -1,5 +1,7 @@
-This library is a fork of RobThree/TwoFactorAuth
 # ![Logo](https://raw.githubusercontent.com/RobThree/TwoFactorAuth/master/logo.png) PHP library for Two Factor Authentication
+
+This library is a fork of RobThree/TwoFactorAuth in order to add the following functionality:
+* QR codes can now contain a username/account identifier, technically this is simply part of the label (as defined in RFC 6238), however many Authenticator apps split this information out into two separate fields
 
 [![Build status](https://img.shields.io/github/actions/workflow/status/robthree/twofactorauth/test.yml?branch=master)](https://github.com/RobThree/TwoFactorAuth/actions?query=branch%3Amaster) [![Latest Stable Version](https://img.shields.io/packagist/v/robthree/twofactorauth.svg?style=flat-square)](https://packagist.org/packages/robthree/twofactorauth) [![License](https://img.shields.io/packagist/l/robthree/twofactorauth.svg?style=flat-square)](LICENSE) [![Downloads](https://img.shields.io/packagist/dt/robthree/twofactorauth.svg?style=flat-square)](https://packagist.org/packages/robthree/twofactorauth) [![PayPal donate button](http://img.shields.io/badge/paypal-donate-orange.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6MB5M2SQLP636 "Keep me off the streets")
 
