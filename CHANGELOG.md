@@ -1,6 +1,12 @@
 # Serevinus\TwoFactorAuth changelog
 
+# Version 3.5.x
+
 Forked from RobThree\TwoFactorAuth 3.0.2
+
+## No breaking changes
+
+The label string is now split into a label and username if a colon exists in the label string, this will allow QR codes to contain a user identifier for instances where a user might have multiple accounts on the same platform.
 
 # Version 3.x
 
