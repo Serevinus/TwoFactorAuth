@@ -1,8 +1,8 @@
 # ![Logo](https://raw.githubusercontent.com/Serevinus/TwoFactorAuth/master/logo.png) PHP library for Two Factor Authentication
 
-This library is a fork of RobThree/TwoFactorAuth
-
 [![Build status](https://img.shields.io/github/actions/workflow/status/serevinus/twofactorauth/test.yml?branch=master)](https://github.com/Serevinus/TwoFactorAuth/actions?query=branch%3Amaster) [![Latest Stable Version](https://img.shields.io/packagist/v/serevinus/twofactorauth.svg?style=flat-square)](https://packagist.org/packages/serevinus/twofactorauth) [![License](https://img.shields.io/packagist/l/serevinus/twofactorauth.svg?style=flat-square)](LICENSE) [![Downloads](https://img.shields.io/packagist/dt/serevinus/twofactorauth.svg?style=flat-square)](https://packagist.org/packages/serevinus/twofactorauth) [![PayPal donate button](http://img.shields.io/badge/paypal-donate-orange.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6MB5M2SQLP636 "Keep me off the streets")
+
+This library is a fork of RobThree/TwoFactorAuth
 
 PHP library for [two-factor (or multi-factor) authentication](http://en.wikipedia.org/wiki/Multi-factor_authentication) using [TOTP](http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) and [QR-codes](http://en.wikipedia.org/wiki/QR_code). Inspired by, based on but most importantly an *improvement* on '[PHPGangsta/GoogleAuthenticator](https://github.com/PHPGangsta/GoogleAuthenticator)'. There's a [.Net implementation](https://github.com/RobThree/TwoFactorAuth.Net) of this library as well.
 
