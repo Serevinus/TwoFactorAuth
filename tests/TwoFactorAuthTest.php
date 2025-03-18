@@ -6,11 +6,11 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 use ReflectionMethod;
-use RobThree\Auth\Algorithm;
-use RobThree\Auth\Providers\Time\HttpTimeProvider;
-use RobThree\Auth\Providers\Time\NTPTimeProvider;
-use RobThree\Auth\TwoFactorAuth;
-use RobThree\Auth\TwoFactorAuthException;
+use Serevinus\Auth\Algorithm;
+use Serevinus\Auth\Providers\Time\HttpTimeProvider;
+use Serevinus\Auth\Providers\Time\NTPTimeProvider;
+use Serevinus\Auth\TwoFactorAuth;
+use Serevinus\Auth\TwoFactorAuthException;
 use Tests\Providers\Qr\TestQrProvider;
 
 class TwoFactorAuthTest extends TestCase
@@ -41,9 +41,9 @@ class TwoFactorAuthTest extends TestCase
         $tfa = new TwoFactorAuth(new TestQrProvider(), 'Test', 6, 30, Algorithm::Sha1);
         $tfa->ensureCorrectTime(array(
             new NTPTimeProvider(),                         // Uses pool.ntp.org by default
-            //new \RobThree\Auth\Providers\Time\NTPTimeProvider('time.google.com'),      // Somehow time.google.com and time.windows.com make travis timeout??
+            //new \Serevinus\Auth\Providers\Time\NTPTimeProvider('time.google.com'),      // Somehow time.google.com and time.windows.com make travis timeout??
             new HttpTimeProvider(),                        // Uses google.com by default
-            //new \RobThree\Auth\Providers\Time\HttpTimeProvider('https://github.com'),  // github.com will periodically report times that are off by more than 5 sec
+            //new \Serevinus\Auth\Providers\Time\HttpTimeProvider('https://github.com'),  // github.com will periodically report times that are off by more than 5 sec
             new HttpTimeProvider('https://yahoo.com'),
         ));
         $this->expectNotToPerformAssertions();

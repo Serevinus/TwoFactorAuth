@@ -17,8 +17,8 @@ In order to ensure users of this library make a conscious choice of QR Code Prov
 If you didn't provide one explicitly before, you can get the old behavior with:
 
 ~~~php
-use RobThree\Auth\TwoFactorAuth;
-use RobThree\Auth\Providers\Qr\QRServerProvider;
+use Serevinus\Auth\TwoFactorAuth;
+use Serevinus\Auth\Providers\Qr\QRServerProvider;
 $tfa = new TwoFactorAuth(new QRServerProvider());
 ~~~
 
@@ -51,12 +51,12 @@ Version 2.x requires at least PHP 8.1.
 
 ### Constructor signature
 
-With version 2.x, the `algorithm` parameter of `RobThree\Auth\TwoFactorAuth` constructor is now an `enum`.
+With version 2.x, the `algorithm` parameter of `Serevinus\Auth\TwoFactorAuth` constructor is now an `enum`.
 
 On version 1.x:
 
 ~~~php
-use RobThree\Auth\TwoFactorAuth;
+use Serevinus\Auth\TwoFactorAuth;
 
 $lib = new TwoFactorAuth('issuer-name', 6, 30, 'sha1');
 ~~~
@@ -64,8 +64,8 @@ $lib = new TwoFactorAuth('issuer-name', 6, 30, 'sha1');
 On version 2.x, simple change the algorithm from a `string` to the correct `enum`:
 
 ~~~php
-use RobThree\Auth\TwoFactorAuth;
-use RobThree\Auth\Algorithm;
+use Serevinus\Auth\TwoFactorAuth;
+use Serevinus\Auth\Algorithm;
 
 $lib = new TwoFactorAuth('issuer-name', 6, 30, Algorithm::Sha1);
 ~~~

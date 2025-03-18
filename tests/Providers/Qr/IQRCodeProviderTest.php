@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Tests\Providers\Qr;
 
 use PHPUnit\Framework\TestCase;
-use RobThree\Auth\Algorithm;
-use RobThree\Auth\Providers\Qr\HandlesDataUri;
-use RobThree\Auth\Providers\Qr\IQRCodeProvider;
-use RobThree\Auth\TwoFactorAuth;
-use RobThree\Auth\TwoFactorAuthException;
+use Serevinus\Auth\Algorithm;
+use Serevinus\Auth\Providers\Qr\HandlesDataUri;
+use Serevinus\Auth\Providers\Qr\IQRCodeProvider;
+use Serevinus\Auth\TwoFactorAuth;
+use Serevinus\Auth\TwoFactorAuthException;
 
 class IQRCodeProviderTest extends TestCase
 {

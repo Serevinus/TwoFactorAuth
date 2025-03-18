@@ -8,11 +8,11 @@
         <?php
             // in practice you would require the composer loader if it was not already part of your framework or project
             spl_autoload_register(function ($className) {
-                include_once str_replace(array('RobThree\\Auth', '\\'), array(__DIR__.'/../lib', '/'), $className) . '.php';
+                include_once str_replace(array('Serevinus\\Auth', '\\'), array(__DIR__.'/../lib', '/'), $className) . '.php';
             });
 
             // substitute your company or app name here
-            $tfa = new RobThree\Auth\TwoFactorAuth(new RobThree\Auth\Providers\Qr\QRServerProvider());
+            $tfa = new Serevinus\Auth\TwoFactorAuth(new Serevinus\Auth\Providers\Qr\QRServerProvider());
         ?>
         <li>First create a secret and associate it with a user</li>
         <?php
@@ -43,7 +43,7 @@
         try {
             $tfa->ensureCorrectTime();
             echo 'Your hosts time seems to be correct / within margin';
-        } catch (RobThree\Auth\TwoFactorAuthException $ex) {
+        } catch (Serevinus\Auth\TwoFactorAuthException $ex) {
             echo '<b>Warning:</b> Your hosts time seems to be off: ' . $ex->getMessage();
         }
     ?>

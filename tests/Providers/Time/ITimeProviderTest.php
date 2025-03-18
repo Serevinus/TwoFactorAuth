@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Providers\Time;
 
 use PHPUnit\Framework\TestCase;
-use RobThree\Auth\Algorithm;
-use RobThree\Auth\TwoFactorAuth;
-use RobThree\Auth\TwoFactorAuthException;
+use Serevinus\Auth\Algorithm;
+use Serevinus\Auth\TwoFactorAuth;
+use Serevinus\Auth\TwoFactorAuthException;
 use Tests\Providers\Qr\TestQrProvider;
 
 class ITimeProviderTest extends TestCase

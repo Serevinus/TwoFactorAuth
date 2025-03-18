@@ -21,7 +21,7 @@ Argument          | Default value     | Use
 
 ### RNG providers
 
-Should you feel the need to use a CSPRNG different than `random_bytes()`, you can use the `rngprovider` argument of the constructor to provide an object implementing the [`IRNGProvider`](https://github.com/RobThree/TwoFactorAuth/blob/master/lib/Providers/Rng/IRNGProvider.php) interface.
+Should you feel the need to use a CSPRNG different than `random_bytes()`, you can use the `rngprovider` argument of the constructor to provide an object implementing the [`IRNGProvider`](https://github.com/Serevinus/TwoFactorAuth/blob/master/lib/Providers/Rng/IRNGProvider.php) interface.
 
 ### Time providers
 
@@ -31,7 +31,7 @@ You can use the `ensureCorrectTime()` method to ensure the hosts time is correct
 
 **Note:** the `NTPTimeProvider` requires your PHP to have the ability to create sockets. If you do not have that ability and wish to use this function, you should pass an array with only an instance of `HttpTimeProvider`.
 
-Alternatively, you can pass an array of classes that implement the [`ITimeProvider` interface](https://github.com/RobThree/TwoFactorAuth/blob/master/lib/Providers/Time/ITimeProvider.php) to change this and specify the second argument, leniency in seconds (default: 5). An exception will be thrown if the time difference is greater than the leniency.
+Alternatively, you can pass an array of classes that implement the [`ITimeProvider` interface](https://github.com/Serevinus/TwoFactorAuth/blob/master/lib/Providers/Time/ITimeProvider.php) to change this and specify the second argument, leniency in seconds (default: 5). An exception will be thrown if the time difference is greater than the leniency.
 
 Ordinarily, you should not need to monitor that the time on the server is correct in this way however if you choose to, we advise to call this method sparingly when relying on 3rd parties (which both the `HttpTimeProvider` and `NTPTimeProvider` do) or, if you need to ensure time is correct on a (very) regular basis to implement an `ITimeProvider` that is more efficient than the built-in ones (making use of a GPS signal for example).
 

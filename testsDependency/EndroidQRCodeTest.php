@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace TestsDependency;
 
 use PHPUnit\Framework\TestCase;
-use RobThree\Auth\Algorithm;
-use RobThree\Auth\Providers\Qr\EndroidQrCodeProvider;
-use RobThree\Auth\Providers\Qr\HandlesDataUri;
-use RobThree\Auth\TwoFactorAuth;
+use Serevinus\Auth\Algorithm;
+use Serevinus\Auth\Providers\Qr\EndroidQrCodeProvider;
+use Serevinus\Auth\Providers\Qr\HandlesDataUri;
+use Serevinus\Auth\TwoFactorAuth;
 
 class EndroidQRCodeTest extends TestCase
 {

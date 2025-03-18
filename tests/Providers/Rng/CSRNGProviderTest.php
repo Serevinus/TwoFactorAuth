@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Providers\Rng;
 
 use PHPUnit\Framework\TestCase;
-use RobThree\Auth\Providers\Rng\CSRNGProvider;
+use Serevinus\Auth\Providers\Rng\CSRNGProvider;
 
 class CSRNGProviderTest extends TestCase
 {

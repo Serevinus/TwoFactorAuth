@@ -33,7 +33,7 @@ It is recommended to use similar constructor arguments as the included providers
 Example:
 
 ```php
-use RobThree\Auth\TwoFactorAuth;
+use Serevinus\Auth\TwoFactorAuth;
 // using a custom object implementing IQRCodeProvider
 $tfa = new TwoFactorAuth(new MyQrCodeProvider());
 // using named argument and a variable
@@ -52,7 +52,7 @@ $tfa = new TwoFactorAuth(qrcodeprovider: $qrGenerator);
 Example:
 
 ```php
-use RobThree\Auth\TwoFactorAuth;
-use RobThree\Auth\Providers\Qr\GoogleChartsQrCodeProvider;
+use Serevinus\Auth\TwoFactorAuth;
+use Serevinus\Auth\Providers\Qr\GoogleChartsQrCodeProvider;
 $tfa = new TwoFactorAuth(new GoogleChartsQrCodeProvider());
 ```

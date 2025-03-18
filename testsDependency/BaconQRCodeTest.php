@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace TestsDependency;
 
 use PHPUnit\Framework\TestCase;
-use RobThree\Auth\Algorithm;
-use RobThree\Auth\Providers\Qr\BaconQrCodeProvider;
-use RobThree\Auth\Providers\Qr\HandlesDataUri;
-use RobThree\Auth\Providers\Qr\IQRCodeProvider;
-use RobThree\Auth\TwoFactorAuth;
+use Serevinus\Auth\Algorithm;
+use Serevinus\Auth\Providers\Qr\BaconQrCodeProvider;
+use Serevinus\Auth\Providers\Qr\HandlesDataUri;
+use Serevinus\Auth\Providers\Qr\IQRCodeProvider;
+use Serevinus\Auth\TwoFactorAuth;
 use RuntimeException;
 
 class BaconQRCodeTest extends TestCase

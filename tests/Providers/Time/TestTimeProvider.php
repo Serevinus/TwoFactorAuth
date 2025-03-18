@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Providers\Time;
 
-use RobThree\Auth\Providers\Time\ITimeProvider;
+use Serevinus\Auth\Providers\Time\ITimeProvider;
 
 class TestTimeProvider implements ITimeProvider
 {

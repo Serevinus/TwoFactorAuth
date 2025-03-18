@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /**
- * PHP-CS-Fixer config for RobThree/TwoFactorAuth
+ * PHP-CS-Fixer config for Serevinus/TwoFactorAuth
  */
 $finder = PhpCsFixer\Finder::create()
     ->name('/\.php|\.php.dist$/')

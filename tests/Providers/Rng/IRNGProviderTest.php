@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Tests\Providers\Rng;
 
 use PHPUnit\Framework\TestCase;
-use RobThree\Auth\Algorithm;
-use RobThree\Auth\TwoFactorAuth;
+use Serevinus\Auth\Algorithm;
+use Serevinus\Auth\TwoFactorAuth;
 use Tests\Providers\Qr\TestQrProvider;
 
 class IRNGProviderTest extends TestCase
