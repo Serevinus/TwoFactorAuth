@@ -153,7 +153,7 @@ class TwoFactorAuth
     {
         [$label, $user] = explode(':', $label, 2) + ['', null];
         return 'otpauth://totp/' . rawurlencode($label)
-            . ( !$user ? '' : ':' . rawurlencode($user) )
+            . (!$user ? '' : ':' . rawurlencode($user))
             . '?secret=' . rawurlencode($secret)
             . '&issuer=' . rawurlencode((string)$this->issuer)
             . '&period=' . $this->period
